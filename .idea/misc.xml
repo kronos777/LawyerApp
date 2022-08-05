@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.196" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_login.xml" value="0.15346534653465346" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_signin.xml" value="0.33" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/list_item_role.xml" value="0.18697916666666667" />
       </map>
     </option>
   </component>
