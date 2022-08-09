@@ -16,11 +16,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.FragmentSigninBinding
-import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.example.lawyerapp.presentation.helpers.PhoneTextFormatter
 
-class SignInFragment() : Fragment() {
-
+class PasswordRecoveryFragment() : Fragment() {
 
     private lateinit var onEditingFinishedListener: OnEditingFinishedListener
 
@@ -114,5 +112,11 @@ class SignInFragment() : Fragment() {
         binding.textDiplomData.visibility = (View.GONE)
     }
 
+
+    interface OnEditingFinishedListener {
+
+        fun onEditingFinished()
+
+    }
 
 }

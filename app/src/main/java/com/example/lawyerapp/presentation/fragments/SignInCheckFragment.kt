@@ -19,8 +19,7 @@ import com.example.lawyerapp.databinding.FragmentSigninBinding
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.example.lawyerapp.presentation.helpers.PhoneTextFormatter
 
-class SignInFragment() : Fragment() {
-
+class SignInCheckFragment() : Fragment() {
 
     private lateinit var onEditingFinishedListener: OnEditingFinishedListener
 
@@ -113,6 +112,8 @@ class SignInFragment() : Fragment() {
         binding.tilDiplomData.visibility = (View.GONE)
         binding.textDiplomData.visibility = (View.GONE)
     }
+
+
 
 
 }
