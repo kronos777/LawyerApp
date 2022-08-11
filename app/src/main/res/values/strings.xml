@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">LawyerApp</string>
+    <string name="button_ok">Ok</string>
+    <string name="text_recovery_password">Укажите адрес электронной почты. Мы отправим на него новый пароль и инструкцию по смене, на всяки случай.</string>
+    <string name="text_recovery_password_bottom">Востановить пароль</string>
+    <string name="text_sign_in_check1">На ваш адрес электронной почты отправлено письмо.</string>
+    <string name="text_sign_in_check2">Пожалуйста, перейдите по указанной в письме ссылке, чтобы активировать вашу учетную запись.</string>
+    <string name="text_sign_in_check3">Обязательно проверьте папку «СПАМ», если письмо подтверждения не приходит длительное время.</string>
+    <string name="login_checkbox">Запомнить меня</string>
+    <string name="login_forgot_password">Забыли пароль?</string>
     <string name="registration_text">Регистрация</string>
     <string name="registration_user_role">Пользователь</string>
     <string name="registration_email">Email</string>
@@ -18,4 +26,10 @@
     <string name="registration_enter_account">Войти в аккуаунт</string>
     <string name="registration_terms_of_use">Нажимая кнопку “Зарегистрироваться”, я принимаю условия Пользовательского соглашения и условия Политики конфиденциальности.</string>
     <string name="registration_choose_image">Загрузить аватар.</string>
+    <string name="title_onboarding_1">Начать.</string>
+    <string name="title_onboarding_2">Инструкция на все случаи жизни.</string>
+    <string name="title_onboarding_3">Вопросы юристу.</string>
+    <string name="description_onboarding_1">Наше приложение поможет найти решение юридических вопросов любой степени сложности. Вам не нужно тратить время на поход к юристу, все ответы вы найдете в нашем приложени.</string>
+    <string name="description_onboarding_2">Не знаете, как вернуть некачественный тьовар? Что писать в договоре аренды? Когда подавать декларацию? Выберите подходящую ситуацию, и мы подберем для вас решение!</string>
+    <string name="description_onboarding_3">Если у вас есть вопрос, на который вы не смогли получить ответ в инструкциях, то задайте его нашему юристу напрямую в чате.</string>
 </resources>

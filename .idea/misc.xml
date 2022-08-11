@@ -3,15 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.196" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.196" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.195" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/onboarding_unselected_dot_blue.xml" value="0.195" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/onboarding_viewpager_selector_blue.xml" value="0.195" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
-        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_login.xml" value="0.15346534653465346" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_onboarding_example1.xml" value="1.25" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_login.xml" value="0.33" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_onboarding1.xml" value="0.2776268115942029" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_openning_screensaver.xml" value="0.2776268115942029" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_password_recovery.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_signin.xml" value="0.33" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_signin_check.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/list_item_role.xml" value="0.18697916666666667" />
-        <entry key="..\:/laywerapp/app/src/main/res/layout/fragment_openning_screensaver.xml" value="0.14130434782608695" />
-        <entry key="..\:/laywerapp/app/src/main/res/layout/fragment_password_recovery.xml" value="0.14130434782608695" />
-        <entry key="..\:/laywerapp/app/src/main/res/layout/fragment_signin_check.xml" value="0.14130434782608695" />
-        <entry key="..\:/laywerapp/app/src/main/res/layout/fragment_welcome.xml" value="0.14130434782608695" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/menu/login.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

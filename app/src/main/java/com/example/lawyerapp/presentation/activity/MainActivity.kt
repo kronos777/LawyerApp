@@ -1,6 +1,7 @@
 package com.example.lawyerapp.presentation.activity
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,20 +9,21 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainBinding
-import com.example.lawyerapp.presentation.fragments.SignInFragment
+import com.example.lawyerapp.presentation.fragments.*
+import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity(), SignInFragment.OnEditingFinishedListener {
+class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
     private lateinit var binding: ActivityMainBinding
     // create Firebase authentication object
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+       // setContentView(R.layout.activity_main)
 
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -30,9 +32,15 @@ class MainActivity : AppCompatActivity(), SignInFragment.OnEditingFinishedListen
         // Initialising auth object
         auth = Firebase.auth
 
-        launchFragment(SignInFragment())
+       // launchFragment(SignInFragment())
+       //launchFragment(LoginFragment())
+        //launchFragment(SignInCheckFragment())
+        //launchFragment(PasswordRecoveryFragment())
+       // launchFragment(OpeningScreensaverFragment())
 
-
+        val intent =
+            Intent(this, OnboardingExample1Activity::class.java)
+        startActivity(intent)
         //binding.buttonRegistration.setOnClickListener {
             //signUpUser()
            //login()

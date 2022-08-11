@@ -5,7 +5,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".presentation.fragments.SignInCheckFragment">
+
+   <TextView
+        android:id="@+id/textSignInCheck1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+       android:padding="20dp"
+       android:background="@color/register_ok"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@id/textSignInCheck2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/text_sign_in_check1" />
+
+    <TextView
+        android:id="@+id/textSignInCheck2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@id/textSignInCheck3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSignInCheck1"
+        android:text="@string/text_sign_in_check2" />
+
+    <TextView
+        android:id="@+id/textSignInCheck3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@id/enter_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSignInCheck2"
+        android:text="@string/text_sign_in_check3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enter_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:textStyle="normal"
+        android:text="@string/button_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSignInCheck3"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

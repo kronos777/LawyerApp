@@ -15,16 +15,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.lawyerapp.R
+import com.example.lawyerapp.databinding.FragmentPasswordRecoveryBinding
 import com.example.lawyerapp.databinding.FragmentSigninBinding
+import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.example.lawyerapp.presentation.helpers.PhoneTextFormatter
 
 class PasswordRecoveryFragment() : Fragment() {
 
     private lateinit var onEditingFinishedListener: OnEditingFinishedListener
 
-    private var _binding: FragmentSigninBinding? = null
-    private val binding: FragmentSigninBinding
-        get() = _binding ?: throw RuntimeException("FragmentSigninBinding == null")
+    private var _binding: FragmentPasswordRecoveryBinding? = null
+    private val binding: FragmentPasswordRecoveryBinding
+        get() = _binding ?: throw RuntimeException("FragmentPasswordRecoveryBinding == null")
 
 
     override fun onAttach(context: Context) {
@@ -38,7 +40,7 @@ class PasswordRecoveryFragment() : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       //parseParams()
+
     }
 
     override fun onCreateView(
@@ -46,7 +48,7 @@ class PasswordRecoveryFragment() : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSigninBinding.inflate(inflater, container, false)
+        _binding = FragmentPasswordRecoveryBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -54,69 +56,9 @@ class PasswordRecoveryFragment() : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Регистрация"
-
-        hideLawyerFields()
-
-        val items = listOf("Клиент", "Юрист")
-        val adapter = ArrayAdapter(requireContext(), R.layout.list_item_role, items)
-        (binding.etRole as? AutoCompleteTextView)?.setAdapter(adapter)
-
-        // Минимальное число символов для показа выпадающего списка
-        binding.etRole.threshold = 2
-
-        // Обработчик щелчка
-        binding.etRole.onItemClickListener = AdapterView.OnItemClickListener { parent, _,
-                                                                               position, id ->
-            val selectedItem = parent.getItemAtPosition(position).toString()
-            // Выводим выбранное слово
-            Toast.makeText(getContext(), "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
-
-        }
-
-        binding.etPhone.addTextChangedListener(PhoneTextFormatter(binding.etPhone, "+7 (###) ###-####"))
-
-        /*
-        // Отслеживаем закрытие выпадающего списка
-        autoCompleteTextView.setOnDismissListener {
-            Toast.makeText(applicationContext, "Suggestion closed.", Toast.LENGTH_SHORT).show()
-        }
-
-        // Обработчик щелчка для корневого элемента макета (LinearLayout или др.)
-        root_layout.setOnClickListener {
-            val text = autoCompleteTextView.text
-            Toast.makeText(applicationContext, "Inputted: $text", Toast.LENGTH_SHORT).show()
-        }
-
-        // Если к компоненту перешёл фокус
-        autoCompleteTextView.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) {
-                // Выводим выпадающий список
-                autoCompleteTextView.showDropDown()
-            }
-        }
-        addTextChangeListeners()
-        launchRightMode()
-        observeViewModel()*/
-    }
-
-    private fun showLawyerFields() {
+        (activity as AppCompatActivity).supportActionBar?.title = "Восстановление пароля"
 
     }
 
-    private fun hideLawyerFields() {
-        binding.tilLastname.visibility = (View.GONE)
-        binding.tilPassportData.visibility = (View.GONE)
-        binding.textPassportData.visibility = (View.GONE)
-        binding.tilDiplomData.visibility = (View.GONE)
-        binding.textDiplomData.visibility = (View.GONE)
-    }
-
-
-    interface OnEditingFinishedListener {
-
-        fun onEditingFinished()
-
-    }
 
 }
