@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:title="@string/bottom_nav_main"  />
+    <item
+        android:id="@+id/services"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:title="@string/bottom_nav_services" />
+    <item
+        android:id="@+id/my_work"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:title="@string/bottom_nav_my_work" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:title="@string/bottom_nav_profile" />
+</menu>

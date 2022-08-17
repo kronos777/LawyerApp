@@ -54,12 +54,17 @@
         android:id="@+id/btn_next_step"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_arrow_circle_right_24"
+        app:fabCustomSize="40dp"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
         app:backgroundTint="@color/color_primary"
         app:tint="@color/white"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="425dp"
         android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
 </RelativeLayout>

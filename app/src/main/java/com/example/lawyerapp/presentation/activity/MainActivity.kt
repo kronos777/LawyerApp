@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainBinding
-import com.example.lawyerapp.presentation.fragments.*
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -32,14 +31,18 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         // Initialising auth object
         auth = Firebase.auth
 
-       // launchFragment(SignInFragment())
+       // launchFragment(MainWindowFragment())
+        //launchFragment(IntroductoryFragment())
+        //launchFragment(SignInFragment())
        //launchFragment(LoginFragment())
         //launchFragment(SignInCheckFragment())
         //launchFragment(PasswordRecoveryFragment())
        // launchFragment(OpeningScreensaverFragment())
 
         val intent =
-            Intent(this, OnboardingExample1Activity::class.java)
+        //  Intent(this, TestToolbarActivity::class.java)
+          Intent(this, MainScreenActivity::class.java)
+           //Intent(this, OnboardingExample1Activity::class.java)
         startActivity(intent)
         //binding.buttonRegistration.setOnClickListener {
             //signUpUser()

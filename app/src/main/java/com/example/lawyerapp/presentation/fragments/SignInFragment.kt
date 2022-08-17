@@ -72,7 +72,13 @@ class SignInFragment() : Fragment() {
                                                                                position, id ->
             val selectedItem = parent.getItemAtPosition(position).toString()
             // Выводим выбранное слово
-            Toast.makeText(getContext(), "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(getContext(), "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+            if(selectedItem == "Юрист") {
+                showLawyerFields()
+            } else {
+                hideLawyerFields()
+            }
+
 
         }
 
@@ -103,7 +109,11 @@ class SignInFragment() : Fragment() {
     }
 
     private fun showLawyerFields() {
-
+        binding.tilLastname.visibility = (View.VISIBLE)
+        binding.tilPassportData.visibility = (View.VISIBLE)
+        binding.textPassportData.visibility = (View.VISIBLE)
+        binding.tilDiplomData.visibility = (View.VISIBLE)
+        binding.textDiplomData.visibility = (View.VISIBLE)
     }
 
     private fun hideLawyerFields() {
