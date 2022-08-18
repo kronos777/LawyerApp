@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/LawyerApp/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.125" />
+        <entry key="..\:/LawyerApp/app/src/main/res/layout/activity_main_screen.xml" value="0.1" />
+        <entry key="..\:/LawyerApp/app/src/main/res/menu/bottom_navigation_user_menu.xml" value="0.5766990291262136" />
+        <entry key="..\:/LawyerApp/app/src/main/res/menu/test_app_bar_top.xml" value="0.175" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1975" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.196" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.196" />

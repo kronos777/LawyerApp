@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainBinding
 import com.example.lawyerapp.databinding.ActivityMainScreenBinding
@@ -30,18 +32,19 @@ class MainScreenActivity : AppCompatActivity() {
 
         //(this as MainScreenActivity).enableHomeBackIcon(false)
         /*test*/
-       /* val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_slideshow
-            ), drawerLayout
-        )
+       /* */
+       // val navController = binding.appBarTop
+        val drawerLayout: DrawerLayout? = binding.drawerLayoutId
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
-*/
+       // setSupportActionBar(binding.toolBar)
+
+
+      //  setupActionBarWithNavController(navController, appBarConfiguration)
+
 
         // create instance of the material toolbar
         val materialToolbar: MaterialToolbar = binding.toolBar
-
+            //  setSupportActionBar(materialToolbar)
         // assign the on menu item click listener
         materialToolbar.setOnMenuItemClickListener {
             when (it.itemId) {
@@ -61,7 +64,7 @@ class MainScreenActivity : AppCompatActivity() {
         toggle = getActionBarDrawerToggle(binding.drawerLayoutId, binding.toolBar).apply {
             setToolbarNavigationClickListener {
                 // Back to home fragment for any hit to the back button
-                 //  navController.navigate(R.id.app_bar_top)
+                //   navController.navigate(R.id.app_bar_top)
             }
             // Intialize the icon at the app start
             enableHomeBackIcon(false)
