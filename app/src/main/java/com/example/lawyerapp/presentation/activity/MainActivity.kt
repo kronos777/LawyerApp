@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
        // launchFragment(OpeningScreensaverFragment())
 
         val intent =
-        //  Intent(this, TestToolbarActivity::class.java)
-          Intent(this, MainScreenActivity::class.java)
+            //  Intent(this, TestToolbarActivity::class.java)
+         Intent(this, MainScreenActivity::class.java)
            //Intent(this, OnboardingExample1Activity::class.java)
         startActivity(intent)
         //binding.buttonRegistration.setOnClickListener {

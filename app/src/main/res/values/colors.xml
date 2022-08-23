@@ -7,11 +7,14 @@
     <color name="color_secondary">#C48DB1</color>
     <color name="color_tretiary">#C48D8D</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="tab_icon">#8DC48F</color>
+    <color name="teal_200">#8DC48F</color>
     <color name="teal_700">#FF018786</color>
     <color name="register_ok">#E1F1E5</color>
     <color name="black">#1A1C19</color>
     <color name="white">#FFFFFFFF</color>
     <color name="unselected">#cccccc</color>
     <color name="top_panel_welcome">#cccccc</color>
+    <color name="test_bottom_panel">#6750A4</color>
+    <color name="border_gray">#79747E</color>
 </resources>

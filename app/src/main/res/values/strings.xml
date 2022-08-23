@@ -8,6 +8,11 @@
     <string name="text_sign_in_check3">Обязательно проверьте папку «СПАМ», если письмо подтверждения не приходит длительное время.</string>
     <string name="login_checkbox">Запомнить меня</string>
     <string name="introductory_text">Судный день</string>
+    <string name="main_screen_welcome">Мы - ваш онлайн-юрист</string>
+    <string name="main_screen_txt1">У нас вы сможете получить лучшую консультацию юристов онлайн из любой точки мира.</string>
+    <string name="main_screen_txt2">Задайте вопрос прямо сейчас, и его увидят множество профессионалов со всей России.</string>
+    <string name="main_screen_btn1">Задать вопрос юристам</string>
+    <string name="main_screen_btn2">Поиск по ситуации</string>
     <string name="login_forgot_password">Забыли пароль?</string>
     <string name="registration_text">Регистрация</string>
     <string name="registration_user_role">Пользователь</string>

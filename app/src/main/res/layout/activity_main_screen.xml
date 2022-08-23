@@ -23,12 +23,15 @@
             android:fitsSystemWindows="true"/>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
+            app:tabTextAppearance="@style/MineCustomTabText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabBackground="@color/white"
-            app:tabSelectedTextColor="@color/color_primary"
+            app:tabSelectedTextColor="@color/black"
+            app:tabIconTint="@color/tab_icon"
             app:tabGravity="fill"
             app:tabMode="fixed"
+            app:tabInlineLabel="true"
             app:tabTextColor="@android:color/black">
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -53,19 +56,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-
-
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_item_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="0dp"
+                android:layout_marginBottom="80dp"
                 />
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/nav_view_bottom"
-                style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+                style="@style/NavigationView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:labelVisibilityMode="labeled"
@@ -73,7 +73,9 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:menu="@menu/bottom_navigation_user_menu" />
+                app:menu="@menu/bottom_navigation_user_menu"
+
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <com.google.android.material.navigation.NavigationView

@@ -7,11 +7,11 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
-import com.example.lawyerapp.databinding.ActivityMainBinding
 import com.example.lawyerapp.databinding.ActivityMainScreenBinding
+import com.example.lawyerapp.presentation.fragments.MainScreenFragment
+import com.example.lawyerapp.presentation.helpers.BottomFragment
 import com.google.android.material.appbar.MaterialToolbar
 
 class MainScreenActivity : AppCompatActivity() {
@@ -98,6 +98,14 @@ class MainScreenActivity : AppCompatActivity() {
         }
 
 
+        binding.bottomSheetShowBar.setOnClickListener {
+            BottomFragment().show(supportFragmentManager, "tag")
+            Toast.makeText(this, "Bottom show", Toast.LENGTH_SHORT).show()
+        }
+
+
+        launchFragment(MainScreenFragment())
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -132,6 +140,15 @@ class MainScreenActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle!!)
         toggle?.syncState()
         return toggle as ActionBarDrawerToggle
+    }
+
+
+    private fun launchFragment(fragment: Fragment) {
+     //   this.supportFragmentManager.popBackStack()
+        this.supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_item_container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
 }

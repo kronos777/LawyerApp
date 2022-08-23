@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/LawyerApp/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.125" />
-        <entry key="..\:/LawyerApp/app/src/main/res/layout/activity_main_screen.xml" value="0.1" />
-        <entry key="..\:/LawyerApp/app/src/main/res/menu/bottom_navigation_user_menu.xml" value="0.5766990291262136" />
-        <entry key="..\:/LawyerApp/app/src/main/res/menu/test_app_bar_top.xml" value="0.175" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1975" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/bottomsheetbackground.xml" value="0.195" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_account_balance_24.xml" value="0.196" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_arrow_circle_right_24.xml" value="0.196" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_assignment_24.xml" value="0.196" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_attach_file_24.xml" value="0.196" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.196" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_forum_24.xml" value="0.291" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.196" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.29" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.196" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.195" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/onboarding_unselected_dot_blue.xml" value="0.195" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/drawable/onboarding_viewpager_selector_blue.xml" value="0.195" />
@@ -20,14 +24,18 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main_screen_test.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_onboarding_example1.xml" value="0.33" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_test_toolbar.xml" value="0.18802083333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.18802083333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/button_in_bsheet.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_introductory.xml" value="0.1" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_login.xml" value="0.33" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_main_screen.xml" value="0.33" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_mian_window.xml" value="0.18541666666666667" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_onboarding1.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_openning_screensaver.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_password_recovery.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_signin.xml" value="0.33" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_signin_check.xml" value="0.2776268115942029" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/layout_persistent_bottomsheet.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/list_item_role.xml" value="0.18697916666666667" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/nav_header.xml" value="0.2717391304347826" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/menu/bottom_navigation_user_menu.xml" value="0.18958333333333333" />
