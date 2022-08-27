@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">LawyerApp</string>
     <string name="button_ok">Ok</string>
+    <string name="change_user_phone_h1">Новый номер телефона</string>
+    <string name="change_user_phone_p1">На этот номер будет отправлен код подтверждения</string>
+    <string name="change_user_email_h1">Новая электронная почта</string>
+    <string name="change_user_email_p1">На этот адрес будет отправлено письмо для подтверждения электронной почты</string>
     <string name="text_recovery_password">Укажите адрес электронной почты. Мы отправим на него новый пароль и инструкцию по смене, на всяки случай.</string>
     <string name="text_recovery_password_bottom">Востановить пароль</string>
     <string name="text_sign_in_check1">На ваш адрес электронной почты отправлено письмо.</string>
@@ -8,6 +12,11 @@
     <string name="text_sign_in_check3">Обязательно проверьте папку «СПАМ», если письмо подтверждения не приходит длительное время.</string>
     <string name="login_checkbox">Запомнить меня</string>
     <string name="introductory_text">Судный день</string>
+    <string name="ask_lawyer_question_h1">Насколько срочно вам необходим юрист?</string>
+    <string name="ask_lawyer_question_p1">На основании вашего запроса мы определим подходящего вам юриста</string>
+    <string name="ask_lawyer_question_ch1">В течении часа</string>
+    <string name="ask_lawyer_question_ch2">В течение дня</string>
+    <string name="ask_lawyer_question_ch3">В течение несколько дней</string>
     <string name="main_screen_welcome">Мы - ваш онлайн-юрист</string>
     <string name="main_screen_txt1">У нас вы сможете получить лучшую консультацию юристов онлайн из любой точки мира.</string>
     <string name="main_screen_txt2">Задайте вопрос прямо сейчас, и его увидят множество профессионалов со всей России.</string>
@@ -44,4 +53,6 @@
     <string name="bottom_nav_services">Услуги</string>
     <string name="bottom_nav_my_work">Мои дела</string>
     <string name="bottom_nav_profile">Профиль</string>
+    <string name="text_send">Повторить отправку</string>
+    <string name="bottom_send">Отправить</string>
 </resources>

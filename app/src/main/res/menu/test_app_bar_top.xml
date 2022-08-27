@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/favorite"
-        android:icon="@drawable/ic_baseline_forum_24"
+        android:id="@+id/message"
+        app:actionLayout="@layout/view_alertsbadge"
         android:title="Favourites"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/notifications"
         android:icon="@drawable/ic_baseline_notifications_24"
         android:title="Search"
         app:showAsAction="ifRoom" />

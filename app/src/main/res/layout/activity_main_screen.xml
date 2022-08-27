@@ -34,6 +34,7 @@
             app:tabInlineLabel="true"
             app:tabTextColor="@android:color/black">
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/message_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="222 юриста онлайн"
@@ -41,6 +42,7 @@
                 />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/notification_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="111 клиента онлайн"
