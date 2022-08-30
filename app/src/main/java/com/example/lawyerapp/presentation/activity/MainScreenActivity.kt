@@ -17,6 +17,7 @@ import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainScreenBinding
 import com.example.lawyerapp.presentation.fragments.AboutAppFragment
 import com.example.lawyerapp.presentation.fragments.AskLawyerQuestionFragment
+import com.example.lawyerapp.presentation.fragments.SettingsUserAccountFragment
 import com.example.lawyerapp.presentation.fragments.UserSettingsFragment
 import com.google.android.material.appbar.MaterialToolbar
 import java.lang.String
@@ -131,7 +132,8 @@ class MainScreenActivity : AppCompatActivity() {
         }*/
 
 
-        launchFragment(AboutAppFragment())
+        launchFragment(SettingsUserAccountFragment())
+       // launchFragment(AboutAppFragment())
         //launchFragment(UserSettingsFragment())
         //launchFragment(AskLawyerQuestionFragment())
         //launchFragment(MainScreenFragment())

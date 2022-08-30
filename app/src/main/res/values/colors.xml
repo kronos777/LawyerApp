@@ -17,4 +17,6 @@
     <color name="top_panel_welcome">#cccccc</color>
     <color name="test_bottom_panel">#6750A4</color>
     <color name="border_gray">#79747E</color>
+    <color name="color_error">#B3261E</color>
+    <color name="card_background">#FFFBFE</color>
 </resources>
