@@ -6,17 +6,18 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.ACTION_PICK
 import android.graphics.Bitmap
+import android.icu.number.NumberFormatter.with
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.databinding.FragmentSettingUserAccountBinding
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
+
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
@@ -32,11 +33,6 @@ class SettingsUserAccountFragment: Fragment() {
     val GALLERY_REQUEST = 1
     val PIC_CROP = 2
     private var picUri: Uri? = null
-    val CAMERA_REQUEST = 1
-
-    private val TAG: String = "AppDebug"
-
-    private val GALLERY_REQUEST_CODE = 1234
 
 
     override fun onCreateView(
@@ -64,7 +60,7 @@ class SettingsUserAccountFragment: Fragment() {
 
                         when (which) {
                             0 -> getCameraImage()
-                            1 -> getGalleryImage()
+                            1 -> testCrop()
                             2 -> Toast.makeText(getActivity(), "Ничего не делаем", Toast.LENGTH_SHORT).show()
                         }
 
@@ -75,6 +71,10 @@ class SettingsUserAccountFragment: Fragment() {
         //(activity as AppCompatActivity).supportActionBar?.title = "Войти"
         //(activity as AppCompatActivity).supportActionBar?.subtitle = "Зарегистрироваться"
 
+
+    }
+
+    private fun testCrop() {
 
     }
 
@@ -106,7 +106,6 @@ class SettingsUserAccountFragment: Fragment() {
             } else {
                 var bitmap: Bitmap? = null
                 val imageUri: Uri? = data?.getData()
-
 
 
                 bitmap = MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, imageUri)

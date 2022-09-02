@@ -9,7 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainBinding
+import com.example.lawyerapp.presentation.fragments.LoginFragment
+import com.example.lawyerapp.presentation.fragments.SignInFragment
+import com.example.lawyerapp.presentation.helpers.FirebaseUtils
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -34,16 +38,16 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
        // launchFragment(MainWindowFragment())
         //launchFragment(IntroductoryFragment())
         //launchFragment(SignInFragment())
-       //launchFragment(LoginFragment())
+       launchFragment(LoginFragment())
         //launchFragment(SignInCheckFragment())
         //launchFragment(PasswordRecoveryFragment())
        // launchFragment(OpeningScreensaverFragment())
 
-        val intent =
+        //val intent =
             //  Intent(this, TestToolbarActivity::class.java)
-         Intent(this, MainScreenActivity::class.java)
+        // Intent(this, MainScreenActivity::class.java)
            //Intent(this, OnboardingExample1Activity::class.java)
-        startActivity(intent)
+      //  startActivity(intent)
         //binding.buttonRegistration.setOnClickListener {
             //signUpUser()
            //login()
@@ -156,10 +160,6 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         TODO("Not yet implemented")
     }
 
-}
-
-class FirebaseUtils {
-    val fireStoreDatabase = FirebaseFirestore.getInstance()
 }
 
 data class User (val name: String, val lastname: String, val gender: String, val id: String)

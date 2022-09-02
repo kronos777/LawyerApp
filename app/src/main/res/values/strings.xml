@@ -38,6 +38,7 @@
     <string name="registration_repeat_password">Повторите пароль</string>
     <string name="registration_user_picture">Загрузить аватар</string>
     <string name="registration_button">Зарегистрироваться</string>
+    <string name="enter_button">Войти</string>
     <string name="registration_enter_account">Войти в аккуаунт</string>
     <string name="registration_terms_of_use">Нажимая кнопку “Зарегистрироваться”, я принимаю условия Пользовательского соглашения и условия Политики конфиденциальности.</string>
     <string name="registration_choose_image">Загрузить аватар.</string>

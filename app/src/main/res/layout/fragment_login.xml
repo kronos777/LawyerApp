@@ -88,24 +88,12 @@
         android:textStyle="normal"
         android:textAllCaps="false"
         android:background="@color/teal_200"
-        android:text="@string/registration_button"
-        app:layout_constraintBottom_toTopOf="@id/textTermsOfUse"
+        android:text="@string/enter_button"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/checkbox_remember_me"
         />
-    <TextView
-        android:id="@+id/textTermsOfUse"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:textSize="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_button"
-        android:text="@string/registration_terms_of_use" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
