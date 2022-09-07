@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
 
        // launchFragment(MainWindowFragment())
         //launchFragment(IntroductoryFragment())
-        //launchFragment(SignInFragment())
-       launchFragment(LoginFragment())
+        launchFragment(SignInFragment())
+       //launchFragment(LoginFragment())
         //launchFragment(SignInCheckFragment())
         //launchFragment(PasswordRecoveryFragment())
        // launchFragment(OpeningScreensaverFragment())

@@ -79,6 +79,7 @@ class LoginFragment: Fragment() {
             }
         }
     }
+    
     private fun launchFragment(fragment: Fragment) {
        // this.supportFragmentManager.popBackStack()
         getActivity()?.supportFragmentManager?.beginTransaction()

@@ -168,21 +168,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/registration_passport_data"
+                android:clickable="true"
+                android:focusable="false"
                 android:inputType="textEmailAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ImageView
+            android:id="@+id/imageViewPassport"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_passport_data"
+            android:src="@drawable/attachmenticon"
+            android:layout_marginTop="6dp"
+            />
+
         <TextView
             android:id="@+id/text_passport_data"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:textSize="12dp"
-            android:textColor="@color/color_primary"
+            android:textSize="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toTopOf="@id/til_diplom_data"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewPassport"
             app:layout_constraintTop_toBottomOf="@+id/til_passport_data"
             android:text="@string/registration_passport_data_ext" />
 
@@ -203,23 +216,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/registration_diplom_data"
+                android:clickable="true"
+                android:focusable="false"
                 android:inputType="text"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ImageView
+            android:id="@+id/imageViewDiplom"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_diplom_data"
+            android:src="@drawable/attachmenticon"
+            android:layout_marginTop="6dp"
+            />
 
         <TextView
             android:id="@+id/text_diplom_data"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_weight="1"
-            android:textSize="12dp"
-            android:textColor="@color/color_primary"
+            android:textSize="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
             android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@id/til_password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewDiplom"
             app:layout_constraintTop_toBottomOf="@+id/til_diplom_data"
+            app:layout_constraintBottom_toTopOf="@id/til_password"
             android:text="@string/registration_diplom_data_ext" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -271,28 +297,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_repeat_password"
-            android:src="@drawable/attachmenticon"
-            android:layout_marginTop="6dp"
-            />
-
-        <TextView
-            android:id="@+id/imageChoose"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:textSize="14dp"
-            android:layout_marginTop="6dp"
-            android:textColor="@color/black"
-           android:layout_marginLeft="35dp"
-            app:layout_constraintStart_toStartOf="@id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/til_repeat_password"
-            android:text="@string/registration_choose_image" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/save_button"
@@ -304,36 +308,21 @@
             android:textAllCaps="false"
             android:background="@color/color_primary"
             android:text="@string/registration_button"
-            app:layout_constraintBottom_toTopOf="@id/textTermsOfUse"
+            app:layout_constraintBottom_toTopOf="@id/checkbox_remember_me"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageChoose"
+            app:layout_constraintTop_toBottomOf="@id/til_repeat_password"
             />
-        <TextView
-            android:id="@+id/textTermsOfUse"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:textSize="10dp"
-            android:textColor="@color/black"
-            android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@id/textEnterAccount"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/save_button"
-            android:text="@string/registration_terms_of_use" />
-        <TextView
-            android:id="@+id/textEnterAccount"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:textSize="16dp"
-            android:textColor="@color/color_primary"
-            android:textAlignment="center"
+     <CheckBox
+            android:id="@+id/checkbox_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/registration_enter_account" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/save_button"
+            android:text="@string/register_checkbox"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

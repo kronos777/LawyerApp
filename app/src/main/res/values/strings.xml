@@ -11,6 +11,7 @@
     <string name="text_sign_in_check2">Пожалуйста, перейдите по указанной в письме ссылке, чтобы активировать вашу учетную запись.</string>
     <string name="text_sign_in_check3">Обязательно проверьте папку «СПАМ», если письмо подтверждения не приходит длительное время.</string>
     <string name="login_checkbox">Запомнить меня</string>
+    <string name="register_checkbox">Я принимаю условия Пользовательского соглашения и условия Политики конфиденциальности.</string>
     <string name="introductory_text">Судный день</string>
     <string name="ask_lawyer_question_h1">Насколько срочно вам необходим юрист?</string>
     <string name="ask_lawyer_question_p1">На основании вашего запроса мы определим подходящего вам юриста</string>
