@@ -4,14 +4,14 @@
 
     <item
         android:id="@+id/message"
-        app:actionLayout="@layout/view_alertsbadge"
-        android:title="Favourites"
+        app:actionLayout="@layout/view_message_alerts"
+        android:title="Message"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/notifications"
-        android:icon="@drawable/ic_baseline_notifications_24"
-        android:title="Search"
+        app:actionLayout="@layout/view_notification_alerts"
+        android:title="Notifications"
         app:showAsAction="ifRoom" />
 
 

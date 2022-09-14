@@ -7,6 +7,11 @@
     <string name="change_user_email_p1">На этот адрес будет отправлено письмо для подтверждения электронной почты</string>
     <string name="text_recovery_password">Укажите адрес электронной почты. Мы отправим на него новый пароль и инструкцию по смене, на всяки случай.</string>
     <string name="text_recovery_password_bottom">Востановить пароль</string>
+    <string name="text_change_password_title">Требования к паролю:</string>
+    <string name="text_change_password_bottom">Изменить пароль</string>
+    <string name="text_change_password_hint1">Введите старый пароль</string>
+    <string name="text_change_password_hint2">Введите новый пароль</string>
+    <string name="text_change_password_hint3">Повторите новый пароль</string>
     <string name="text_sign_in_check1">На ваш адрес электронной почты отправлено письмо.</string>
     <string name="text_sign_in_check2">Пожалуйста, перейдите по указанной в письме ссылке, чтобы активировать вашу учетную запись.</string>
     <string name="text_sign_in_check3">Обязательно проверьте папку «СПАМ», если письмо подтверждения не приходит длительное время.</string>

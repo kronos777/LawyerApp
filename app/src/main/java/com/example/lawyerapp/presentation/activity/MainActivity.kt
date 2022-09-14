@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainBinding
 import com.example.lawyerapp.presentation.fragments.LoginFragment
+import com.example.lawyerapp.presentation.fragments.PasswordChangeFragment
 import com.example.lawyerapp.presentation.fragments.SignInFragment
 import com.example.lawyerapp.presentation.helpers.FirebaseUtils
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
 
        // launchFragment(MainWindowFragment())
         //launchFragment(IntroductoryFragment())
-        launchFragment(SignInFragment())
+        launchFragment(PasswordChangeFragment())
+        //  launchFragment(SignInFragment())
        //launchFragment(LoginFragment())
         //launchFragment(SignInCheckFragment())
         //launchFragment(PasswordRecoveryFragment())

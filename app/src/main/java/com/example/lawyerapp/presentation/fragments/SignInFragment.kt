@@ -249,14 +249,14 @@ class SignInFragment() : Fragment(), OnEditingFinishedListener {
 
 
     private fun uploadImages(paramsUpload: String) {
-        for (url in listUrlFile.indices) {
-            val imageUri = listUrlFile[url]
+        for (index in listUrlFile.indices) {
+            val imageUri = listUrlFile[index]
             if (imageUri != null) {
                 val progressDialog = ProgressDialog(getActivity())
                 progressDialog.setTitle("Uploading...")
                 progressDialog.show()
                 val ref: StorageReference =
-                    storageReference.child("images/" + auth.uid.toString() + "/" + paramsUpload + "/" + "image" + url)
+                    storageReference.child("images/" + auth.uid.toString() + "/" + paramsUpload + "/" + "image" + index)
                 ref.putFile(imageUri!!)
                     .addOnSuccessListener {
                         progressDialog.dismiss()
