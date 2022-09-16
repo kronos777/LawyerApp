@@ -8,10 +8,10 @@
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        tools:context=".presentation.fragments.LoginFragment">
+        tools:context=".presentation.fragments.ChangeUserPhoneConfirmationFragment">
 
         <TextView
-            android:id="@+id/textChangeEmailH1"
+            android:id="@+id/textChangePhoneH1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -26,46 +26,46 @@
             android:text="@string/change_user_phone_h1" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_email"
+            android:id="@+id/til_phone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintBottom_toTopOf="@id/textChangeEmailP1"
+            android:layout_marginTop="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textChangeEmailH1"
+            app:layout_constraintTop_toBottomOf="@id/textChangePhoneH1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_email"
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/registration_phone"
                 android:inputType="textEmailAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/textChangeEmailP1"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_phone_code"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="14dp"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/black"
-            android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@id/enter_button"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_email"
-            android:text="@string/change_user_phone_p1" />
+            app:layout_constraintTop_toBottomOf="@id/til_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/registration_phone_code"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/enter_button"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="25dp"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:textStyle="normal"
@@ -75,7 +75,6 @@
             app:layout_constraintBottom_toTopOf="@id/textRecoveryPasswordLink"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textChangeEmailP1"
             />
         <TextView
             android:id="@+id/textRecoveryPasswordLink"
@@ -83,12 +82,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="14dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginBottom="50dp"
             android:textColor="@color/color_primary"
             android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_button"
             android:text="@string/text_send" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

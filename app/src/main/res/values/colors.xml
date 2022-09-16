@@ -20,4 +20,6 @@
     <color name="color_gray">#99939F</color>
     <color name="color_error">#B3261E</color>
     <color name="card_background">#FFFBFE</color>
+    <color name="card_profile_required">#2AB31E</color>
+    <color name="card_profile_background">#FCFAFD</color>
 </resources>

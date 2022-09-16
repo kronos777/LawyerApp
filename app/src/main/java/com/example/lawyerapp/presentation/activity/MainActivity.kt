@@ -9,9 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.ActivityMainBinding
-import com.example.lawyerapp.presentation.fragments.LoginFragment
-import com.example.lawyerapp.presentation.fragments.PasswordChangeFragment
-import com.example.lawyerapp.presentation.fragments.SignInFragment
+import com.example.lawyerapp.presentation.fragments.*
 import com.example.lawyerapp.presentation.helpers.FirebaseUtils
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.google.android.material.appbar.MaterialToolbar
@@ -36,9 +34,13 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         // Initialising auth object
         auth = Firebase.auth
 
+        launchFragment(ProfileUserAccountFragment())
+        //launchFragment(ChangeUserPhoneConfirmationFragment())
+        //launchFragment(ChangeUserEmailConfirmationFragment())
+
        // launchFragment(MainWindowFragment())
         //launchFragment(IntroductoryFragment())
-        launchFragment(PasswordChangeFragment())
+        //launchFragment(PasswordChangeFragment())
         //  launchFragment(SignInFragment())
        //launchFragment(LoginFragment())
         //launchFragment(SignInCheckFragment())
