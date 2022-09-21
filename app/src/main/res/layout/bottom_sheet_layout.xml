@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,55 +11,60 @@
     <LinearLayout
         android:id="@+id/layout_top"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="16dp"
         android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/simple_image"
-            android:layout_width="48dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_launcher_foreground"
-            app:tint="#32CD32" />
-
-        <TextView
-            android:id="@+id/simple_text"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Text and image in linear layout"
-            android:textSize="20sp" />
-
+            app:srcCompat="@drawable/bottom_sheet_image"
+            app:tint="#1A1C19" />
     </LinearLayout>
 
     <!-- В данном layout содержится разметка для collapsed состояния фрагмента -->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/layout_collapsed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_top">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:text="Text about something"
-            android:textSize="24sp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:textStyle="normal"
+            android:text="Выберите фото"
+            android:textSize="14sp"
+            android:lineHeight="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="500"
+            />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto"
             android:gravity="center"
-            android:text="Some element, for example RecyclerView"
-            android:textSize="32sp" />
+            android:text="Готово"
+            android:textColor="@color/color_primary"
+            android:textFontWeight="400"
+            android:textSize="12sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <!-- В данном layout содержится разметка для развёрнутого состояния фрагмента
     Изначально она находится в состоянии invisible и располагается под layout_top как и layout_collapsed-->
@@ -67,53 +73,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="invisible"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_top">
-
-        <LinearLayout
+<!--
+        <ListView
+            android:id="@+id/listViewImage"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:gravity="center"
-                android:text="First Line"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:gravity="center"
-                android:text="Second Line"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:gravity="center"
-                android:text="Third Line"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <TextView
+            android:layout_height="575dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />-->
+        <GridView
+            android:id="@+id/listViewImage"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="Text about something"
-            android:textSize="24sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:gravity="center"
-            android:text="Some bigger element, for example bigger RecyclerView"
-            android:textSize="36sp" />
-
+            android:layout_height="975dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"
+            android:horizontalSpacing="6dp"
+            android:numColumns="4"
+            android:verticalSpacing="6dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

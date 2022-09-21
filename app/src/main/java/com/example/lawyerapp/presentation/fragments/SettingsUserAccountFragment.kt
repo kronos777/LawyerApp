@@ -16,6 +16,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.databinding.FragmentSettingUserAccountBinding
+import com.example.lawyerapp.presentation.helpers.BottomFragment
+import com.example.lawyerapp.presentation.helpers.BottomTestGalleryFragment
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -50,7 +52,7 @@ class SettingsUserAccountFragment: Fragment() {
 
 
         binding.changeFotoProfile.setOnClickListener {
-            val items = arrayOf("Сделать фото", "Выбрать ", "Отмена")
+            val items = arrayOf("Сделать фото", "Выбрать из галереи", "Удалить", "Отмена")
 
             context?.let { it1 ->
                 MaterialAlertDialogBuilder(it1)
@@ -71,12 +73,33 @@ class SettingsUserAccountFragment: Fragment() {
         //(activity as AppCompatActivity).supportActionBar?.title = "Войти"
         //(activity as AppCompatActivity).supportActionBar?.subtitle = "Зарегистрироваться"
 
-
+        deleteProfileUser()
     }
 
     private fun testCrop() {
-
+        getActivity()?.let { BottomTestGalleryFragment().show(it.supportFragmentManager, "tag") }
     }
+
+    private fun deleteProfileUser() {
+        binding.aboutApplicationHref2Delete.setOnClickListener {
+
+            getActivity()?.let { it1 ->
+                MaterialAlertDialogBuilder(it1)
+                    .setTitle("Вы действительно хотите удалить профиль?")
+                    //.setCustomTitle(textViewTitle)
+                    .setMessage("После удаления профиля все данные будут удалены безвозвратно")
+                    .setNegativeButton("отмена") { dialog, which ->
+                        // Respond to negative button press
+                    }
+                    .setPositiveButton("удалить") { dialog, which ->
+
+                        // Respond to positive button press
+                    }
+                    .show()
+            }
+        }
+    }
+
 
 
     private fun getCameraImage() {

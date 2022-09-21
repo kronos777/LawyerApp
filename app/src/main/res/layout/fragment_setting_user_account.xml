@@ -94,7 +94,7 @@
                 android:lineHeight="16dp"
                 android:text="Изменить"
                 android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/color_secondary"
+                android:textColor="@color/color_primary"
                 android:textFontWeight="400"
                 android:textSize="12sp" />
 
@@ -105,10 +105,12 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginBottom="16dp"
+                android:drawableStart="@drawable/ic_baseline_check_circle_outline_24"
                 android:lineHeight="16dp"
                 android:text="Mari714@gmail.com"
+                android:gravity="center"
                 android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/color_primary"
+                android:textColor="@color/card_profile_required"
                 android:textFontWeight="400"
                 android:textSize="12sp" />
 
@@ -160,7 +162,7 @@
                 android:lineHeight="16dp"
                 android:text="Изменить"
                 android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/color_secondary"
+                android:textColor="@color/color_primary"
                 android:textFontWeight="400"
                 android:textSize="12sp" />
 
@@ -171,10 +173,12 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginBottom="16dp"
+                android:drawableStart="@drawable/ic_baseline_check_circle_outline_24"
                 android:lineHeight="16dp"
                 android:text="+7 (915) 377-07-37"
+                android:gravity="center"
                 android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="@color/color_primary"
+                android:textColor="@color/card_profile_required"
                 android:textFontWeight="400"
                 android:textSize="12sp" />
 
@@ -196,10 +200,10 @@
         android:layout_marginBottom="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/about_application_href2"
+        app:layout_constraintBottom_toTopOf="@id/about_application_href2_delete"
         android:text="Сменить пароль" />
     <TextView
-        android:id="@+id/about_application_href2"
+        android:id="@+id/about_application_href2_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"

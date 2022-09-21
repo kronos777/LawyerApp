@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         // Initialising auth object
         auth = Firebase.auth
 
-        launchFragment(ProfileUserAccountFragment())
+      //  launchFragment(ProfileUserAccountFragment())
         //launchFragment(ChangeUserPhoneConfirmationFragment())
         //launchFragment(ChangeUserEmailConfirmationFragment())
 
@@ -47,11 +47,11 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         //launchFragment(PasswordRecoveryFragment())
        // launchFragment(OpeningScreensaverFragment())
 
-        //val intent =
-            //  Intent(this, TestToolbarActivity::class.java)
-        // Intent(this, MainScreenActivity::class.java)
+        val intent =
+        //  Intent(this, TestToolbarActivity::class.java)
+         Intent(this, MainScreenActivity::class.java)
            //Intent(this, OnboardingExample1Activity::class.java)
-      //  startActivity(intent)
+        startActivity(intent)
         //binding.buttonRegistration.setOnClickListener {
             //signUpUser()
            //login()

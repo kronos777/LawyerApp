@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@id/about_application_p1"
         android:text="Политика конфиденциальности" />
     <TextView
-        android:id="@+id/about_application_href2"
+        android:id="@+id/about_application_href2_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -94,7 +94,7 @@
         android:fontFamily="@font/roboto"
         android:textColor="@color/color_primary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_application_href2"
+        app:layout_constraintTop_toBottomOf="@+id/about_application_href2_delete"
         android:text="Условия использование регистрации на «Судный день»" />
 
 
