@@ -38,6 +38,9 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         //launchFragment(ChangeUserPhoneConfirmationFragment())
         //launchFragment(ChangeUserEmailConfirmationFragment())
 
+        launchFragment(SearchBySituationFragment())
+      //  launchFragment(CreateLeadOkMessageFragment())
+       // launchFragment(CreateLeadFragment())
        // launchFragment(MainWindowFragment())
         //launchFragment(IntroductoryFragment())
         //launchFragment(PasswordChangeFragment())
@@ -47,11 +50,11 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         //launchFragment(PasswordRecoveryFragment())
        // launchFragment(OpeningScreensaverFragment())
 
-        val intent =
+      //  val intent =
         //  Intent(this, TestToolbarActivity::class.java)
-         Intent(this, MainScreenActivity::class.java)
+       //  Intent(this, MainScreenActivity::class.java)
            //Intent(this, OnboardingExample1Activity::class.java)
-        startActivity(intent)
+      //  startActivity(intent)
         //binding.buttonRegistration.setOnClickListener {
             //signUpUser()
            //login()
