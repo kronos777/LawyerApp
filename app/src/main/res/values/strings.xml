@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">LawyerApp</string>
     <string name="button_ok">Ok</string>
+    <string name="button_next">Далее</string>
     <string name="change_user_phone_h1">Новый номер телефона</string>
     <string name="change_user_phone_p1">На этот номер будет отправлен код подтверждения</string>
     <string name="change_user_email_h1">Новая электронная почта</string>

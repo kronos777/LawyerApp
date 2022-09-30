@@ -38,7 +38,10 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         //launchFragment(ChangeUserPhoneConfirmationFragment())
         //launchFragment(ChangeUserEmailConfirmationFragment())
 
-        launchFragment(SearchBySituationFragment())
+        //launchFragment(CreateSituationAutoFreeFragment())
+        launchFragment(CreateSituationAppliancesOneFragment())
+        //launchFragment(CreateSituationAutoOneFragment())
+        //launchFragment(SearchBySituationFragment())
       //  launchFragment(CreateLeadOkMessageFragment())
        // launchFragment(CreateLeadFragment())
        // launchFragment(MainWindowFragment())
