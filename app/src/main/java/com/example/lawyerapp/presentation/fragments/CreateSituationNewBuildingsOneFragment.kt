@@ -17,12 +17,12 @@ import com.example.lawyerapp.databinding.*
 import com.example.lawyerapp.presentation.activity.MainActivity
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 
-class CreateSituationFurnitureOneFragment: Fragment() {
+class CreateSituationNewBuildingsOneFragment: Fragment() {
 
     private lateinit var onEditingFinishedListener: OnEditingFinishedListener
 
-    private var _binding: FragmentSituationFurnitureS1Binding? = null
-    private val binding: FragmentSituationFurnitureS1Binding
+    private var _binding: FragmentSituationNewBuildingsS1Binding? = null
+    private val binding: FragmentSituationNewBuildingsS1Binding
         get() = _binding ?: throw RuntimeException("FragmentSituationAutoS1Binding == null")
 
     private var radioSelect: String = String()
@@ -33,7 +33,7 @@ class CreateSituationFurnitureOneFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSituationFurnitureS1Binding.inflate(inflater, container, false)
+        _binding = FragmentSituationNewBuildingsS1Binding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -68,7 +68,7 @@ class CreateSituationFurnitureOneFragment: Fragment() {
         })*/
 
         binding.enterButton.setOnClickListener {
-            launchFragment(CreateSituationFurnitureTwoFragment.newInstanceStr(radioSelect))
+            launchFragment(CreateSituationNewBuildingsTwoFragment.newInstanceStr(radioSelect))
         }
 
         //(activity as AppCompatActivity).supportActionBar?.title = "Войти"

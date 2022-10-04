@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.*
 import com.example.lawyerapp.domain.situation.SituationItem
 import com.example.lawyerapp.presentation.adapter.SearchBySituationAdapter
@@ -73,7 +75,29 @@ class SearchBySituationFragment: Fragment() {
             )
 
         }
+        setupClickListener()
     }
 
+    private fun setupClickListener() {
+        situationListAdapter.onPaymentItemClickListener = {
+
+            when(it.id) {
+                0 -> launchFragment(CreateSituationAutoOneFragment())
+                1 -> launchFragment(CreateSituationAppliancesOneFragment())
+                2 -> launchFragment(CreateSituationNewBuildingsOneFragment())
+                3 -> launchFragment(CreateSituationFurnitureOneFragment())
+                4 -> launchFragment(CreateSituationMedicalServicesOneFragment())
+                5 -> launchFragment(CreateSituationClothingOneFragment())
+            }
+        }
+    }
+
+
+    fun launchFragment(fragment: Fragment) {
+        fragmentManager?.beginTransaction()
+            ?.replace(R.id.fragment_item_container, fragment)
+            ?.addToBackStack(null)
+            ?.commit()
+    }
 
 }

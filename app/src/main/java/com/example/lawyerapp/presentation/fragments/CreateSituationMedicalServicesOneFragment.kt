@@ -70,7 +70,7 @@ class CreateSituationMedicalServicesOneFragment: Fragment() {
         })*/
 
         binding.enterButton.setOnClickListener {
-            launchFragment(CreateSituationAutoTwoFragment.newInstanceStr(radioSelect))
+            launchFragment(CreateSituationMedicalServicesTwoFragment.newInstanceStr(radioSelect))
         }
 
         //(activity as AppCompatActivity).supportActionBar?.title = "Войти"

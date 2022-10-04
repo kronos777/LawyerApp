@@ -45,7 +45,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d1_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_situation_h1"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Договор купли продажи" />
 
         <ImageView
             android:id="@+id/image_d1_attachment"
@@ -96,7 +96,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d2_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s1"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Документы об оплате" />
 
         <ImageView
             android:id="@+id/image_d2_attachment"
@@ -147,7 +147,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d3_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s2"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Акт дефектовки, заключение специалиста" />
 
         <ImageView
             android:id="@+id/image_d3_attachment"
@@ -199,7 +199,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d4_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s3"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Претензионная переписка" />
 
         <ImageView
             android:id="@+id/image_d4_attachment"
@@ -237,107 +237,6 @@
 
 
 
-        <TextView
-            android:id="@+id/text_d5_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16dp"
-            android:textFontWeight="600"
-            android:lineHeight="24dp"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/black"
-            android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@id/image_d5_attachment"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s4"
-            android:text="Договор купли-продажи ТС" />
-
-        <ImageView
-            android:id="@+id/image_d5_attachment"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_d5_title"
-            android:src="@drawable/attachmenticon"
-            android:layout_marginTop="12dp"
-            />
-
-        <TextView
-            android:id="@+id/text_d5_attachment"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="14dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/color_gray"
-            android:textAlignment="viewStart"
-            app:layout_constraintStart_toEndOf="@id/image_d5_attachment"
-            app:layout_constraintTop_toBottomOf="@+id/text_d5_title"
-            android:text="Загрузить файлы" />
-
-        <ImageView
-            android:id="@+id/image_hr_situation_s5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_d5_attachment"
-            android:src="@drawable/separator_hr"
-            android:layout_marginTop="16dp"
-            />
-
-
-        <TextView
-            android:id="@+id/text_d6_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16dp"
-            android:textFontWeight="600"
-            android:lineHeight="24dp"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/black"
-            android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@id/image_d6_attachment"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s5"
-            android:text="Договор купли-продажи ТС" />
-
-        <ImageView
-            android:id="@+id/image_d6_attachment"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_d6_title"
-            android:src="@drawable/attachmenticon"
-            android:layout_marginTop="12dp"
-            />
-
-        <TextView
-            android:id="@+id/text_d6_attachment"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="14dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/color_gray"
-            android:textAlignment="viewStart"
-            app:layout_constraintStart_toEndOf="@id/image_d6_attachment"
-            app:layout_constraintTop_toBottomOf="@+id/text_d6_title"
-            android:text="Загрузить файлы" />
-
-        <ImageView
-            android:id="@+id/image_hr_situation_s6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_d6_attachment"
-            android:src="@drawable/separator_hr"
-            android:layout_marginTop="16dp"
-            />
-
 
 
         <TextView
@@ -353,7 +252,7 @@
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toTopOf="@id/til_message_data"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s6"
+            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s4"
             android:text="Договор купли-продажи ТС" />
 
 

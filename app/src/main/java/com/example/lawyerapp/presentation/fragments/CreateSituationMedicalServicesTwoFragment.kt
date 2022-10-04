@@ -57,7 +57,7 @@ class CreateSituationMedicalServicesTwoFragment: Fragment() {
             Log.d("paramsFr", "f1"+strFirstFragment.toString()+"f2"+radioSelect)
 
             val strToFree = strFirstFragment.toString()+"///"+radioSelect
-            launchFragment(CreateSituationAutoFreeFragment.newInstanceStr(strToFree))
+            launchFragment(CreateSituationMedicalServicesFreeFragment.newInstanceStr(strToFree))
         }
 
     }

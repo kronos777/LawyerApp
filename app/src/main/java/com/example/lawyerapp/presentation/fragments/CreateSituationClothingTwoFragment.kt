@@ -14,15 +14,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.*
-import com.example.lawyerapp.presentation.activity.MainActivity
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 
-class CreateSituationFurnitureOneFragment: Fragment() {
+class CreateSituationClothingTwoFragment: Fragment() {
 
     private lateinit var onEditingFinishedListener: OnEditingFinishedListener
 
-    private var _binding: FragmentSituationFurnitureS1Binding? = null
-    private val binding: FragmentSituationFurnitureS1Binding
+    private var _binding: FragmentSituationClothingS2Binding? = null
+    private val binding: FragmentSituationClothingS2Binding
         get() = _binding ?: throw RuntimeException("FragmentSituationAutoS1Binding == null")
 
     private var radioSelect: String = String()
@@ -33,49 +32,36 @@ class CreateSituationFurnitureOneFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSituationFurnitureS1Binding.inflate(inflater, container, false)
+        _binding = FragmentSituationClothingS2Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       // binding.enterButton.background.alpha = 70
-       // val textView = binding.textSignInCheck3
+
+        val args = requireArguments()
+        val strFirstFragment = args.getString(FIRST_FRAGMENT_STRING)
+      //  Toast.makeText(getActivity(), "this params"+ strFirstFragment, Toast.LENGTH_SHORT).show()
+
         val radioGroup = binding.radioGroupSituation
 
         radioGroup.setOnCheckedChangeListener(
             RadioGroup.OnCheckedChangeListener { group, checkedId ->
                 val radio: RadioButton = group.findViewById(checkedId)
-                Toast.makeText(getActivity()," On checked change :"+
-                        " ${radio.text}",
-                    Toast.LENGTH_SHORT).show()
                 radioSelect = radio.text.toString()
             })
 
-/*
-        binding.etMessageData.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                Log.d("countInt", count.toString())
-            }
-
-        })*/
 
         binding.enterButton.setOnClickListener {
-            launchFragment(CreateSituationFurnitureTwoFragment.newInstanceStr(radioSelect))
+            Log.d("paramsFr", "f1"+strFirstFragment.toString()+"f2"+radioSelect)
+
+            val strToFree = strFirstFragment.toString()+"///"+radioSelect
+            launchFragment(CreateSituationClothingFreeFragment.newInstanceStr(strToFree))
         }
 
-        //(activity as AppCompatActivity).supportActionBar?.title = "Войти"
-        //(activity as AppCompatActivity).supportActionBar?.subtitle = "Зарегистрироваться"
-
-
     }
+
 
     fun launchFragment(fragment: Fragment) {
         fragmentManager?.beginTransaction()
@@ -83,6 +69,27 @@ class CreateSituationFurnitureOneFragment: Fragment() {
             ?.addToBackStack(null)
             ?.commit()
     }
+/*        fun newInstanceStudentId(studentId: Int): PaymentItemListFragment {
+            return PaymentItemListFragment().apply {
+                arguments = Bundle().apply {
+                    putInt(STUDENT_ID, studentId)
+                    putString(SCREEN_MODE, STUDENT_ID_LIST)
+                }
+            }
+        }*/
 
+
+    companion object {
+        private const val FIRST_FRAGMENT_STRING = "first_fragment"
+
+        fun newInstanceStr(str: String): CreateSituationClothingTwoFragment {
+            return CreateSituationClothingTwoFragment().apply {
+                arguments = Bundle().apply {
+                    putString(FIRST_FRAGMENT_STRING, str)
+                }
+            }
+        }
+
+    }
 
 }

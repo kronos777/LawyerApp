@@ -45,7 +45,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d1_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_situation_h1"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Договор долевого участия" />
 
         <ImageView
             android:id="@+id/image_d1_attachment"
@@ -96,7 +96,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d2_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s1"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Разрешение на ввод объекта в эксплуатацию" />
 
         <ImageView
             android:id="@+id/image_d2_attachment"
@@ -147,7 +147,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d3_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s2"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Уведомление от застройщика о готовности объекта и необходимости его принятия участником" />
 
         <ImageView
             android:id="@+id/image_d3_attachment"
@@ -199,7 +199,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d4_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s3"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Акт приема-передачи (при наличии)" />
 
         <ImageView
             android:id="@+id/image_d4_attachment"
@@ -251,7 +251,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d5_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s4"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Документы об оплате цены объекта" />
 
         <ImageView
             android:id="@+id/image_d5_attachment"
@@ -286,8 +286,6 @@
             android:src="@drawable/separator_hr"
             android:layout_marginTop="16dp"
             />
-
-
         <TextView
             android:id="@+id/text_d6_title"
             android:layout_width="match_parent"
@@ -302,7 +300,7 @@
             app:layout_constraintBottom_toTopOf="@id/image_d6_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s5"
-            android:text="Договор купли-продажи ТС" />
+            android:text="Акт осмотра объекта (акт о несоответствиях, перечень несоответствий)" />
 
         <ImageView
             android:id="@+id/image_d6_attachment"
@@ -338,8 +336,6 @@
             android:layout_marginTop="16dp"
             />
 
-
-
         <TextView
             android:id="@+id/text_d7_title"
             android:layout_width="match_parent"
@@ -351,40 +347,17 @@
             android:layout_marginTop="30dp"
             android:textColor="@color/black"
             android:textAlignment="viewStart"
-            app:layout_constraintBottom_toTopOf="@id/til_message_data"
+            app:layout_constraintBottom_toTopOf="@id/image_d7_attachment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s6"
-            android:text="Договор купли-продажи ТС" />
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_message_data"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:layout_constraintBottom_toTopOf="@id/image_d7_attachment"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_d7_title"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-             <com.google.android.material.textfield.TextInputEditText
-                 android:id="@+id/et_message_data"
-                 android:layout_width="match_parent"
-                 android:layout_height="172dp"
-                 android:hint="Текст"
-                 android:inputType="textMultiLine"
-                 android:gravity="top"
-                 />
-        </com.google.android.material.textfield.TextInputLayout>
-
+            android:text="Претензионная переписка" />
 
         <ImageView
             android:id="@+id/image_d7_attachment"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_message_data"
+            app:layout_constraintTop_toBottomOf="@+id/text_d7_title"
             android:src="@drawable/attachmenticon"
             android:layout_marginTop="12dp"
             />
@@ -400,7 +373,7 @@
             android:textColor="@color/color_gray"
             android:textAlignment="viewStart"
             app:layout_constraintStart_toEndOf="@id/image_d7_attachment"
-            app:layout_constraintTop_toBottomOf="@+id/til_message_data"
+            app:layout_constraintTop_toBottomOf="@+id/text_d7_title"
             android:text="Загрузить файлы" />
 
         <ImageView
@@ -408,7 +381,84 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_d7_attachment"
+            app:layout_constraintTop_toBottomOf="@+id/image_d7_attachment"
+            android:src="@drawable/separator_hr"
+            android:layout_marginTop="16dp"
+            />
+
+
+
+
+
+        <TextView
+            android:id="@+id/text_d8_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textFontWeight="600"
+            android:lineHeight="24dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toTopOf="@id/til_message_data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s7"
+            android:text="Сопроводительный текст" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_message_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:layout_constraintBottom_toTopOf="@id/image_d8_attachment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_d8_title"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/et_message_data"
+                 android:layout_width="match_parent"
+                 android:layout_height="172dp"
+                 android:hint="Текст"
+                 android:inputType="textMultiLine"
+                 android:gravity="top"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/image_d8_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_message_data"
+            android:src="@drawable/attachmenticon"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:id="@+id/text_d8_attachment"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_gray"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toEndOf="@id/image_d8_attachment"
+            app:layout_constraintTop_toBottomOf="@+id/til_message_data"
+            android:text="Загрузить файлы" />
+
+        <ImageView
+            android:id="@+id/image_hr_situation_s8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_d8_attachment"
             android:src="@drawable/separator_hr"
             android:layout_marginTop="16dp"
             />
@@ -421,7 +471,7 @@
             android:layout_height="56dp"
             android:textStyle="normal"
             android:text="@string/button_next"
-            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s7"
+            app:layout_constraintTop_toBottomOf="@+id/image_hr_situation_s8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -57,7 +57,7 @@ class CreateSituationFurnitureTwoFragment: Fragment() {
             Log.d("paramsFr", "f1"+strFirstFragment.toString()+"f2"+radioSelect)
 
             val strToFree = strFirstFragment.toString()+"///"+radioSelect
-            launchFragment(CreateSituationAppliancesFreeFragment.newInstanceStr(strToFree))
+            launchFragment(CreateSituationFurnitureFreeFragment.newInstanceStr(strToFree))
         }
 
     }

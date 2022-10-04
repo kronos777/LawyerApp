@@ -54,6 +54,9 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_onboarding1.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_openning_screensaver.xml" value="0.2776268115942029" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_password_recovery.xml" value="0.2776268115942029" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_profile_user_account.xml" value="0.2826086956521739" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_safety_settings_user_account.xml" value="0.29030797101449274" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_safety_user_account.xml" value="0.2826086956521739" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_search_by_situation.xml" value="0.28125" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_setting_user_account.xml" value="0.27943840579710144" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_settings_user.xml" value="0.18958333333333333" />
@@ -65,6 +68,8 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_auto_s1.xml" value="0.28125" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_auto_s2.xml" value="0.33" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_auto_s3.xml" value="0.2465846994535519" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_clothing_s1.xml" value="0.18802083333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_clothing_s2.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_clothing_s3.xml" value="0.2694746376811594" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_furniture_s1.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_furniture_s2.xml" value="0.18802083333333333" />
@@ -73,6 +78,8 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_medical_services_s2.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_medical_services_s3.xml" value="0.2694746376811594" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_new_buidings_s3.xml" value="0.2694746376811594" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_new_buildings_s1.xml" value="0.18802083333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_situation_new_buildings_s2.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_welcome.xml" value="0.18645833333333334" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/item_situation.xml" value="0.28125" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/layout_persistent_bottomsheet.xml" value="0.18802083333333333" />
