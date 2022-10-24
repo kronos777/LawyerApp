@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         // Initialising auth object
         auth = Firebase.auth
 
+      launchFragment(ChatFirstTestFragment())
       //  launchFragment(ProfileUserAccountFragment())
         //launchFragment(ChangeUserPhoneConfirmationFragment())
         //launchFragment(ChangeUserEmailConfirmationFragment())
@@ -41,14 +42,14 @@ class MainActivity : AppCompatActivity(), OnEditingFinishedListener {
         //launchFragment(CreateSituationAutoFreeFragment())
       //  launchFragment(CreateSituationAppliancesOneFragment())
         //launchFragment(CreateSituationAutoOneFragment())
-        launchFragment(SafetyUserAccountFragment())
+      //  launchFragment(SafetyUserAccountFragment())
         //launchFragment(SearchBySituationFragment())
       //  launchFragment(CreateLeadOkMessageFragment())
        // launchFragment(CreateLeadFragment())
        // launchFragment(MainWindowFragment())
         //launchFragment(IntroductoryFragment())
         //launchFragment(PasswordChangeFragment())
-        //  launchFragment(SignInFragment())
+        //launchFragment(SignInFragment())
        //launchFragment(LoginFragment())
         //launchFragment(SignInCheckFragment())
         //launchFragment(PasswordRecoveryFragment())

@@ -27,6 +27,7 @@ import com.bumptech.glide.Glide
 import com.example.lawyerapp.R
 import com.example.lawyerapp.databinding.FragmentSigninBinding
 import com.example.lawyerapp.domain.UserClient
+import com.example.lawyerapp.domain.UserLawyer
 import com.example.lawyerapp.presentation.helpers.FirebaseUtils
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.example.lawyerapp.presentation.helpers.PhoneTextFormatter
@@ -36,6 +37,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -195,7 +198,7 @@ class SignInFragment() : Fragment(), OnEditingFinishedListener {
     }
 
     private fun signInUserLawyer() {
-        val role = "client"
+        val role = "lawyer"
         val name = binding.etName.text.toString()
         val sername = binding.etSername.text.toString()
         val lastname = binding.etLastname.text.toString()
@@ -205,7 +208,52 @@ class SignInFragment() : Fragment(), OnEditingFinishedListener {
         val confirmPassword = binding.etRepeatPassword.text.toString()
         val passport = binding.etPassportData.text.toString()
         val diplom = binding.etDiplomData.text.toString()
-      //  val photo = binding.imageChoose.text.toString()
+
+
+
+        // check pass
+        if (email.isBlank() || password.isBlank() || confirmPassword.isBlank()) {
+            Toast.makeText(getActivity(), "Email and Password can't be blank", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+
+        if (password != confirmPassword) {
+            Toast.makeText(getActivity(), "Password and Confirm Password do not match", Toast.LENGTH_SHORT)
+                .show()
+            return
+        }
+
+        getActivity()?.let {
+            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(it) {
+                if (it.isSuccessful) {
+                    val userCurrent = Firebase.auth.currentUser
+                    userCurrent!!.sendEmailVerification()
+                        .addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                //val user = UserClient(role, name, sername, email, phone, "", password, userCurrent.uid)
+                                //database.child("users").child(userCurrent.uid).setValue(user)
+                                /*val role: String, val name: String, val sername: String, val patronymic: String, val phone: String, val email: String,
+                      val passportData: List<String>, val diplomOfHigherEducation: List<String>, val photo: String, val password: String, val id: String*/
+                                val profile = UserLawyer(role, name, sername, lastname, phone, email,listOf("03-58", "542565"),
+                                    listOf("542dsfsfsd565", "542565sdfs"), "testphoto", password, userCurrent.uid)
+                                val db = FirebaseFirestore.getInstance()
+                                db.collection("Users").document(profile.id)
+                                    .set(profile, SetOptions.merge())
+                                    .addOnSuccessListener { Log.d(ContentValues.TAG, "DocumentSnapshot successfully written!") }
+                                    .addOnFailureListener { e -> Log.w(ContentValues.TAG, "Error writing document", e) }
+                                //  Toast.makeText(getActivity(), "Регистрация прошла успешно на Ваш электронной почты отправлено сообщение.", Toast.LENGTH_SHORT).show()
+                                // uploadImage()
+                            }
+                        }
+                    //  getActivity()?.finish()
+                } else {
+                    Toast.makeText(getActivity(), "Регистрация прервана, ошибка регистрвции.", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+        //  val photo = binding.imageChoose.text.toString()
     }
 
 
@@ -363,9 +411,14 @@ class SignInFragment() : Fragment(), OnEditingFinishedListener {
                     userCurrent!!.sendEmailVerification()
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
-                                val user = UserClient(role, name, sername, email, phone, "", password, userCurrent.uid)
-                                database.child("users").child(userCurrent.uid).setValue(user)
-
+                                //val user = UserClient(role, name, sername, email, phone, "", password, userCurrent.uid)
+                                //database.child("users").child(userCurrent.uid).setValue(user)
+                                val profile = UserClient(role, name, sername, email, phone, "", password, userCurrent.uid)
+                                val db = FirebaseFirestore.getInstance()
+                                db.collection("Users").document(profile.id)
+                                    .set(profile, SetOptions.merge())
+                                    .addOnSuccessListener { Log.d(ContentValues.TAG, "DocumentSnapshot successfully written!") }
+                                    .addOnFailureListener { e -> Log.w(ContentValues.TAG, "Error writing document", e) }
                               //  Toast.makeText(getActivity(), "Регистрация прошла успешно на Ваш электронной почты отправлено сообщение.", Toast.LENGTH_SHORT).show()
                                // uploadImage()
                             }

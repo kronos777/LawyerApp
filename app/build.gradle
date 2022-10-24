@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
+    id 'kotlinx-serialization'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -68,8 +70,11 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.google.firebase:firebase-database-ktx:20.0.6'
     implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
+    //Kotlin seriler
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
     // maven
     implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'androidx.room:room-common:2.4.3'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
     testImplementation 'junit:junit:4.13.2'
