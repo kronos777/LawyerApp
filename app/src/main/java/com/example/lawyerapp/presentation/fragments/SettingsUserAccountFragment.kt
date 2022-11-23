@@ -1,12 +1,10 @@
 package com.example.lawyerapp.presentation.fragments
 
-import android.R
 import android.app.Activity.RESULT_OK
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.ACTION_PICK
 import android.graphics.Bitmap
-import android.icu.number.NumberFormatter.with
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -15,11 +13,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.canhub.cropper.CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE
+import com.canhub.cropper.CropImageContract
+import com.canhub.cropper.CropImageView
+import com.canhub.cropper.CropImageView.Guidelines
+import com.canhub.cropper.options
 import com.example.lawyerapp.databinding.FragmentSettingUserAccountBinding
-import com.example.lawyerapp.presentation.helpers.BottomFragment
 import com.example.lawyerapp.presentation.helpers.BottomTestGalleryFragment
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
-
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
@@ -35,6 +36,21 @@ class SettingsUserAccountFragment: Fragment() {
     val GALLERY_REQUEST = 1
     val PIC_CROP = 2
     private var picUri: Uri? = null
+
+
+    private val cropImage = registerForActivityResult(CropImageContract()) { result ->
+        if (result.isSuccessful) {
+            // Use the returned uri.
+            val uriContent = result.uriContent
+            val uriFilePath = result.getUriFilePath(requireContext()) // optional usage
+         //   Toast.makeText(activity, "img path" + uriContent.toString(), Toast.LENGTH_SHORT).show()
+            val bitmap = MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, uriContent)
+            binding.imageView.setImageBitmap(bitmap)
+        } else {
+            // An error occurred.
+            val exception = result.error
+        }
+    }
 
 
     override fun onCreateView(
@@ -62,8 +78,10 @@ class SettingsUserAccountFragment: Fragment() {
 
                         when (which) {
                             0 -> getCameraImage()
-                            1 -> testCrop()
+                            1 -> getGalleryImage()
+                            //1 -> testCrop()
                             2 -> Toast.makeText(getActivity(), "Ничего не делаем", Toast.LENGTH_SHORT).show()
+                            3 -> startCrop()
                         }
 
                     }
@@ -75,6 +93,35 @@ class SettingsUserAccountFragment: Fragment() {
 
         deleteProfileUser()
     }
+
+
+    private fun startCrop() {
+        // Start picker to get image for cropping and then use the image in cropping activity.
+        cropImage.launch(
+            options {
+                setGuidelines(CropImageView.Guidelines.ON)
+                setOutputCompressFormat(Bitmap.CompressFormat.PNG)
+            }
+        )
+
+        // Start picker to get image for cropping from only gallery and then use the image in cropping activity.
+     /*  cropImage.launch(
+            options {
+                setImagePickerContractOptions(
+                    PickImageContractOptions(includeGallery = true, includeCamera = false)
+                )
+            }
+        )
+
+        // Start cropping activity for pre-acquired image saved on the device and customize settings.
+        cropImage.launch(
+            options(uri = uriFilePath) {
+                setGuidelines(CropImageView.Guidelines.ON)
+                setOutputCompressFormat(Bitmap.CompressFormat.PNG)
+            }
+        )*/
+    }
+
 
     private fun testCrop() {
         getActivity()?.let { BottomTestGalleryFragment().show(it.supportFragmentManager, "tag") }
@@ -111,6 +158,9 @@ class SettingsUserAccountFragment: Fragment() {
         }
     }
 
+
+
+
     private fun getGalleryImage() {
         val photoPickerIntent = Intent(ACTION_PICK)
         photoPickerIntent.type = "image/*"
@@ -129,9 +179,8 @@ class SettingsUserAccountFragment: Fragment() {
             } else {
                 var bitmap: Bitmap? = null
                 val imageUri: Uri? = data?.getData()
-
-
                 bitmap = MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, imageUri)
+
                 binding.imageView.setImageBitmap(bitmap)
             }
 
