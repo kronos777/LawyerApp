@@ -2,26 +2,27 @@ package com.example.lawyerapp.presentation.fragments
 
 import android.app.Activity.RESULT_OK
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_PICK
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.provider.MediaStore.Images
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.canhub.cropper.CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE
 import com.canhub.cropper.CropImageContract
 import com.canhub.cropper.CropImageView
-import com.canhub.cropper.CropImageView.Guidelines
 import com.canhub.cropper.options
 import com.example.lawyerapp.databinding.FragmentSettingUserAccountBinding
 import com.example.lawyerapp.presentation.helpers.BottomTestGalleryFragment
 import com.example.lawyerapp.presentation.helpers.OnEditingFinishedListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.io.ByteArrayOutputStream
 
 
 class SettingsUserAccountFragment: Fragment() {
@@ -65,8 +66,6 @@ class SettingsUserAccountFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         binding.changeFotoProfile.setOnClickListener {
             val items = arrayOf("Сделать фото", "Выбрать из галереи", "Удалить", "Отмена")
 
@@ -81,7 +80,7 @@ class SettingsUserAccountFragment: Fragment() {
                             1 -> getGalleryImage()
                             //1 -> testCrop()
                             2 -> Toast.makeText(getActivity(), "Ничего не делаем", Toast.LENGTH_SHORT).show()
-                            3 -> startCrop()
+                            //3 ->
                         }
 
                     }
@@ -90,15 +89,14 @@ class SettingsUserAccountFragment: Fragment() {
         }
         //(activity as AppCompatActivity).supportActionBar?.title = "Войти"
         //(activity as AppCompatActivity).supportActionBar?.subtitle = "Зарегистрироваться"
-
         deleteProfileUser()
     }
 
 
-    private fun startCrop() {
+    private fun startCrop(uriFilePath: Uri) {
         // Start picker to get image for cropping and then use the image in cropping activity.
         cropImage.launch(
-            options {
+            options(uri = uriFilePath) {
                 setGuidelines(CropImageView.Guidelines.ON)
                 setOutputCompressFormat(Bitmap.CompressFormat.PNG)
             }
@@ -172,22 +170,41 @@ class SettingsUserAccountFragment: Fragment() {
 
         if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
             // Фотка сделана, извлекаем миниатюру картинки
-
             if(data?.extras?.get("data") != null) {
-                val thumbnailBitmap = data?.extras?.get("data") as Bitmap
-                binding.imageView.setImageBitmap(thumbnailBitmap)
+               // val thumbnailBitmap = data?.extras?.get("data") as Bitmap
+                Toast.makeText(activity, data?.extras?.get("data").toString(), Toast.LENGTH_SHORT).show()
+                val imageUri: Uri? = getActivity()?.let { getImageUri(it.applicationContext,
+                    data?.extras?.get("data") as Bitmap
+                ) }
+
+                if (imageUri != null) {
+                    startCrop(imageUri)
+                }
+               // binding.imageView.setImageBitmap(thumbnailBitmap)
             } else {
                 var bitmap: Bitmap? = null
                 val imageUri: Uri? = data?.getData()
-                bitmap = MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, imageUri)
+                if (imageUri != null) {
+                    startCrop(imageUri)
+                }
+               // bitmap = MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, imageUri)
 
-                binding.imageView.setImageBitmap(bitmap)
+              //  binding.imageView.setImageBitmap(bitmap)
             }
 
         }
 
 
     }
+
+
+    fun getImageUri(inContext: Context, inImage: Bitmap): Uri? {
+        val bytes = ByteArrayOutputStream()
+        inImage.compress(Bitmap.CompressFormat.PNG, 100, bytes)
+        val path = Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null)
+        return Uri.parse(path)
+    }
+
 
     private fun performCrop() {
         try {

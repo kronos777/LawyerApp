@@ -32,9 +32,12 @@
     <style name="NavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="itemTextAppearanceActive">@style/ActiveText</item>
         <item name="itemTextAppearanceInactive">@style/InactiveText</item>
+        <item name="itemBackground">@color/color_background_bottom_navigation</item>
+        <item name="itemIconTint">@color/bnv_tab_item_foreground</item>
+        <item name="itemTextColor">@color/black</item>
     </style>
     <style name="ActiveText">
-        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="InactiveText">
         <item name="android:textColor">@color/black</item>
