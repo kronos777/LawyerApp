@@ -33,11 +33,12 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/abb_toolbar.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_crop_test.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
-        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main_screen.xml" value="0.2717391304347826" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main_screen.xml" value="0.1" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_main_screen_test.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_onboarding_example1.xml" value="0.33" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/activity_test_toolbar.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.18802083333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/bottom_sheet_test_gallery_layout.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/button_in_bsheet.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_about_application.xml" value="0.27943840579710144" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_action_in_system.xml" value="0.28442028985507245" />
@@ -45,7 +46,9 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_add_banks_card_result.xml" value="0.2921195652173913" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_ask_lawyer_question.xml" value="0.28125" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_change_user_email.xml" value="0.18958333333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_change_user_email_confirmation.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_change_user_phone.xml" value="0.18958333333333333" />
+        <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_change_user_phone_confirmation.xml" value="0.18802083333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_chat_first_test.xml" value="0.28804347826086957" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_choose_city.xml" value="0.25960841189267586" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/layout/fragment_create_lead.xml" value="0.28125" />
@@ -103,9 +106,6 @@
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/menu/user_screen_drawer_menu.xml" value="0.3625" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/app/src/main/res/menu/user_top_app_bar_menu.xml" value="0.18958333333333333" />
         <entry key="..\:/PortfolioAndroidDevelopment/LawyerApp/mainscreen/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1925" />
-        <entry key="..\:/javalearn/layerapp/app/src/main/res/drawable/base_icon.xml" value="0.1595" />
-        <entry key="..\:/javalearn/layerapp/app/src/main/res/drawable/bottom_nav_color.xml" value="0.1795" />
-        <entry key="..\:/javalearn/layerapp/app/src/main/res/drawable/bottom_nav_tab_background.xml" value="0.1595" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.274" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/drawable/shape_profile_user_account.xml" value="0.274" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/drawable/table_shape.xml" value="0.274" />
@@ -130,7 +130,6 @@
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_password_change.xml" value="0.36666666666666664" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_password_recovery.xml" value="0.36666666666666664" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_profile_user_account.xml" value="0.33" />
-        <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_safety_settings_user_account.xml" value="0.5494791666666666" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_setting_user_account.xml" value="0.36666666666666664" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_settings_user.xml" value="0.36666666666666664" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/fragment_signin.xml" value="0.36666666666666664" />
@@ -144,7 +143,6 @@
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/view_alertsbadge.xml" value="0.36666666666666664" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/view_message_alerts.xml" value="0.36666666666666664" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/layout/view_notification_alerts.xml" value="0.36666666666666664" />
-        <entry key="..\:/javalearn/layerapp/app/src/main/res/menu/bottom_navigation_user_menu.xml" value="0.475" />
         <entry key="..\:/javalearn/layerapp/app/src/main/res/menu/test_app_bar_top.xml" value="0.36666666666666664" />
       </map>
     </option>
